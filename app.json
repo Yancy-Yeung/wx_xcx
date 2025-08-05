@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/home/home",
+    "pages/flight/flight",
+    "pages/service/service",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "Your location information will be used to obtain program information"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home",
+        "color": "#000",
+        "iconPath": "images/tabBar/home.png",
+        "selectedIconPath": "images/tabBar/home_HL.png"
+      },
+      {
+        "pagePath": "pages/flight/flight",
+        "text": "Flight",
+        "iconPath": "images/tabBar/fly.png",
+        "selectedIconPath": "images/tabBar/fly_HL.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "Service",
+        "iconPath": "images/tabBar/service.png",
+        "selectedIconPath": "images/tabBar/service_HL.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "Mine",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine_HL.png"
+      }
+    ],
+    "color": "#999999",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

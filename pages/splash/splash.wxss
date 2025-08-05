@@ -1,0 +1,145 @@
+/* pages/splash/splash.wxss */
+.splash-container {
+    height         : 100vh;
+    background     : linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+}
+
+.countdown {
+    position     : absolute;
+    top          : 100rpx;
+    left         : 40rpx;
+    color        : #fff;
+    font-size    : 32rpx;
+    font-weight  : bold;
+    background   : rgba(0, 0, 0, 0.3);
+    padding      : 10rpx 20rpx;
+    border-radius: 30rpx;
+}
+
+.content {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin-bottom : 120rpx;
+}
+
+.logo-placeholder {
+    width          : 250rpx;
+    height         : 250rpx;
+    background     : rgba(255, 255, 255, 0.2);
+    border-radius  : 250rpx;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    margin-bottom  : 40rpx;
+    border         : 4rpx solid rgba(255, 255, 255, 0.3);
+}
+
+.logo-text {
+    color      : #fff;
+    font-size  : 32rpx;
+    font-weight: bold;
+}
+
+.title {
+    color        : #fff;
+    font-size    : 48rpx;
+    font-weight  : bold;
+    margin-bottom: 20rpx;
+}
+
+.subtitle {
+    color    : rgba(255, 255, 255, 0.8);
+    font-size: 32rpx;
+}
+
+.button-container {
+    position       : absolute;
+    bottom         : 100rpx;
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+}
+
+.skip-btn {
+    background   : #fff;
+    color        : #667eea;
+    font-size    : 32rpx;
+    font-weight  : bold;
+    border-radius: 50rpx;
+    padding      : 20rpx 60rpx;
+    border       : none;
+    box-shadow   : 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+
+.skip-btn:active {
+    transform : translateY(2rpx);
+    box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-image {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(150rpx) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150rpx) rotate(-360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-5rpx) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(5rpx) rotate(0deg);
+    }
+}
+
+.plane-image {
+    position : absolute;
+    top      : 20%;
+    left     : 40%;
+    transform: translate(-50%, -50%);
+    width    : 250rpx;
+    height   : 250rpx;
+    animation: pulse 3s infinite, wobble 3s infinite;
+}

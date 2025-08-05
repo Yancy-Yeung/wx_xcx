@@ -1,0 +1,28 @@
+<!--pages/splash/splash.wxml-->
+<view class="splash-container">
+  <!-- 倒计时显示 -->
+  <view class="countdown"> {{ countdown }}s </view>
+
+  <!-- 启动页面内容 -->
+  <view class="content">
+    <view class="logo-placeholder">
+      <image
+        class="logo-image"
+        src="/images/splash/earth.png"
+        mode="aspectFit"
+      ></image>
+      <image
+        class="plane-image"
+        src="/images/splash/plane.png"
+        mode="aspectFit"
+      ></image>
+    </view>
+    <text class="title">Welcome to</text>
+    <text class="subtitle">Hong Kong Airport</text>
+  </view>
+
+  <!-- 跳转按钮 -->
+  <view class="button-container">
+    <button class="skip-btn" bindtap="skipToIndex">Enter</button>
+  </view>
+</view>

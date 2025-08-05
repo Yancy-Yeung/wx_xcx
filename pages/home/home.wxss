@@ -1,0 +1,19 @@
+.return-button {
+  position        : absolute;
+  top             : 20rpx;
+  left            : 20rpx;
+  width           : 100rpx;
+  height          : 50rpx;
+  background-color: #1296db;
+  color           : #fff;
+  font-size       : 24rpx;
+  text-align      : center;
+  line-height     : 50rpx;
+  border-radius   : 10rpx;
+  box-shadow      : 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
+}
+
+web-view {
+  width : 100%;
+  height: 100%;
+}
