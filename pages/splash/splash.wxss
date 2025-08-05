@@ -11,7 +11,7 @@
 
 .countdown {
     position     : absolute;
-    top          : 100rpx;
+    top          : 80rpx;
     left         : 40rpx;
     color        : #fff;
     font-size    : 32rpx;

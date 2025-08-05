@@ -9,14 +9,13 @@ swiper {
   margin       : 0;
   margin-top   : 0;
   border-radius: 0;
-  box-shadow   : none;
 }
 
-image {
+swiper image {
   width        : 100%;
   border-radius: 30rpx;
   height       : 520rpx;
-  box-shadow   : 0 8rpx 24rpx rgba(135, 206, 235, 0.3);
+  box-shadow   : 0 8rpx 14rpx rgba(135, 206, 235, 0.3);
 }
 
 /* 功能按钮区域样式 */
@@ -25,7 +24,6 @@ image {
   padding      : 40rpx 30rpx;
   margin-top   : 20rpx;
   border-radius: 25rpx;
-  box-shadow   : 0 8rpx 32rpx rgba(135, 206, 235, 0.2);
   border       : 2rpx solid rgba(135, 206, 235, 0.1);
 }
 
@@ -51,7 +49,7 @@ image {
 }
 
 .tab-item:hover {
-  background: rgba(135, 206, 235, 0.1);
+  background: rgba(103, 203, 243, 0.1);
   transform : translateY(-4rpx);
 }
 
@@ -64,7 +62,6 @@ image {
   align-items    : center;
   justify-content: center;
   margin-bottom  : 16rpx;
-  box-shadow     : 0 8rpx 20rpx rgba(70, 130, 180, 0.3);
 }
 
 .tab-icon .image {
@@ -85,7 +82,6 @@ image {
   background   : linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
   margin-top   : 30rpx;
   border-radius: 25rpx;
-  box-shadow   : 0 8rpx 32rpx rgba(135, 206, 235, 0.2);
   overflow     : hidden;
   border       : 2rpx solid rgba(135, 206, 235, 0.1);
 }
@@ -135,7 +131,10 @@ image {
 /* Tab内容区域样式 */
 .tabs-content {
   position  : relative;
-  min-height: 400rpx;
+  height    : 450rpx;
+  /* 固定高度 */
+  overflow-y: auto;
+  /* 滚动显示 */
   background: rgba(255, 255, 255, 0.8);
 }
 
@@ -176,13 +175,11 @@ image {
   border-radius: 20rpx;
   border-left  : 6rpx solid #87CEEB;
   transition   : all 0.3s ease;
-  box-shadow   : 0 4rpx 16rpx rgba(135, 206, 235, 0.15);
 }
 
 .content-item:hover {
   background: linear-gradient(135deg, #E0F6FF 0%, #DDEEFF 100%);
   transform : translateX(10rpx);
-  box-shadow: 0 8rpx 24rpx rgba(135, 206, 235, 0.25);
 }
 
 .item-icon {

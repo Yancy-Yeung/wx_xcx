@@ -14,37 +14,37 @@
 
 <!-- 功能按钮区域 -->
 <view class="function-tabs">
-  <!-- 第一行 -->
+  <!-- 第1行 -->
   <view class="tab-row">
-    <view class="tab-item" bindtap="onTabClick" data-type="service">
+    <view class="tab-item" bindtap="toPlaneSearch" data-type="service">
       <view class="tab-icon">
         <image
         class="logo-image"
-        src="/images/home/plane_search.png"
+        src="/images/home/airline.png"
         mode="aspectFit"
       ></image>
       </view>
-      <text class="tab-text">航班查询</text>
+      <text class="tab-text">Flight</text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="departure">
       <view class="tab-icon">
         <image
         class="logo-image"
-        src="/images/home/plane_go.png"
+        src="/images/home/shipping.png"
         mode="aspectFit"
       ></image>
       </view>
-      <text class="tab-text">香港出发</text>
+      <text class="tab-text">Shipping</text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="arrive">
       <view class="tab-icon">
         <image
         class="logo-image"
-        src="/images/home/plane_come.png"
+        src="/images/home/tax.png"
         mode="aspectFit"
       ></image>
       </view>
-      <text class="tab-text">到达香港</text>
+      <text class="tab-text">Tax Refund</text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="transfer">
       <view class="tab-icon">
@@ -54,7 +54,51 @@
         mode="aspectFit"
       ></image>
       </view>
-      <text class="tab-text">中转接驳</text>
+      <text class="tab-text"></text>
+    </view>
+  </view>
+
+  <!-- 第2行 -->
+  <view class="tab-row">
+    <view class="tab-item" bindtap="toPlaneSearch" data-type="service">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/baggage.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text"></text>
+    </view>
+    <view class="tab-item" bindtap="onTabClick" data-type="departure">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/bankcard.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text"></text>
+    </view>
+    <view class="tab-item" bindtap="onTabClick" data-type="arrive">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/tickets.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text"></text>
+    </view>
+    <view class="tab-item" bindtap="onTabClick" data-type="transfer">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/plane_transfer.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text"></text>
     </view>
   </view>
 </view>
@@ -68,28 +112,28 @@
       bindtap="onTabChange"
       data-index="0"
     >
-      <text class="tab-header-text">最新通知</text>
+      <text class="tab-header-text">最新消息</text>
     </view>
     <view
       class="tab-header-item {{ activeTab === 1 ? 'active' : '' }}"
       bindtap="onTabChange"
       data-index="1"
     >
-      <text class="tab-header-text">机场交通</text>
+      <text class="tab-header-text">交通行程</text>
     </view>
     <view
       class="tab-header-item {{ activeTab === 2 ? 'active' : '' }}"
       bindtap="onTabChange"
       data-index="2"
     >
-      <text class="tab-header-text">旅客指南</text>
+      <text class="tab-header-text">旅客工具</text>
     </view>
     <view
     class="tab-header-item {{ activeTab === 3 ? 'active' : '' }}"
     bindtap="onTabChange"
     data-index="3"
   >
-    <text class="tab-header-text">客服电话</text>
+    <text class="tab-header-text">聯絡我們</text>
   </view>
   </view>
 
@@ -98,7 +142,7 @@
     <!-- 热门推荐 -->
     <view class="tab-content {{ activeTab === 0 ? 'active' : '' }}">
       <view class="content-list">
-        <view class="content-item">
+        <view class="content-item" bindtap="onToNews" >
           <view class="item-icon">🔥</view>
           <view class="item-info">
             <text class="item-title">快速安检通道</text>
@@ -122,16 +166,9 @@
       </view>
     </view>
 
-    <!-- 机场服务 -->
+    <!-- 交通行程 -->
     <view class="tab-content {{ activeTab === 1 ? 'active' : '' }}">
-      <view class="content-list">
-        <view class="content-item">
-          <view class="item-icon">🛄</view>
-          <view class="item-info">
-            <text class="item-title">行李托运</text>
-            <text class="item-desc">在线办理行李托运服务</text>
-          </view>
-        </view>
+      <view class="content-list">        
         <view class="content-item">
           <view class="item-icon">🚌</view>
           <view class="item-info">
@@ -139,6 +176,13 @@
             <text class="item-desc">查看巴士时刻表和路线</text>
           </view>
         </view>
+        <view class="content-item">
+            <view class="item-icon">🗺️</view>
+            <view class="item-info">
+              <text class="item-title">机场地图</text>
+              <text class="item-desc">查看机场内部导航地图</text>
+            </view>
+          </view>
         <view class="content-item">
           <view class="item-icon">🍽️</view>
           <view class="item-info">
@@ -149,9 +193,16 @@
       </view>
     </view>
 
-    <!-- 出行工具 -->
+    <!-- 旅客工具 -->
     <view class="tab-content {{ activeTab === 2 ? 'active' : '' }}">
       <view class="content-list">
+        <view class="content-item">
+            <view class="item-icon">🛄</view>
+            <view class="item-info">
+              <text class="item-title">行李托运</text>
+              <text class="item-desc">在线办理行李托运服务</text>
+            </view>
+          </view>
         <view class="content-item">
           <view class="item-icon">🌤️</view>
           <view class="item-info">
@@ -165,14 +216,54 @@
             <text class="item-title">汇率换算</text>
             <text class="item-desc">实时汇率计算器</text>
           </view>
-        </view>
+        </view>        
+      </view>
+    </view>
+    <!-- 联络我们 -->
+    <view class="tab-content {{ activeTab === 3 ? 'active' : '' }}">
+      <view class="content-list">
         <view class="content-item">
-          <view class="item-icon">🗺️</view>
+            <view class="item-icon">🛄</view>
+            <view class="item-info">
+              <text class="item-title">机场热线</text>
+              <text class="item-desc"></text>
+            </view>
+          </view>
+        <view class="content-item">
+          <view class="item-icon">🌤️</view>
           <view class="item-info">
-            <text class="item-title">机场地图</text>
-            <text class="item-desc">查看机场内部导航地图</text>
+            <text class="item-title">失物认领</text>
+            <text class="item-desc"></text>
           </view>
         </view>
+        <view class="content-item">
+          <view class="item-icon">💱</view>
+          <view class="item-info">
+            <text class="item-title">旅客辅助</text>
+            <text class="item-desc"></text>
+          </view>
+        </view>
+        <view class="content-item">
+            <view class="item-icon">💱</view>
+            <view class="item-info">
+              <text class="item-title">行李寄存及快递</text>
+              <text class="item-desc"></text>
+            </view>
+        </view>      
+        <view class="content-item">
+            <view class="item-icon">💱</view>
+            <view class="item-info">
+              <text class="item-title">停车场</text>
+              <text class="item-desc"></text>
+            </view>
+        </view>   
+        <view class="content-item">
+            <view class="item-icon">💱</view>
+            <view class="item-info">
+              <text class="item-title">民航处</text>
+              <text class="item-desc"></text>
+            </view>
+        </view>      
       </view>
     </view>
   </view>

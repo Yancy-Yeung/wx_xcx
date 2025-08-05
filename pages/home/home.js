@@ -112,4 +112,23 @@ Page({
         });
     }
   },
+
+  toPlaneSearch:function(){
+    // let that = this;
+    wx.navigateTo({
+      url: '/pages/plane_search/plane_search',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
+  onToNews:function(){
+    wx.navigateTo({
+        url: '/pages/to_news/to_news',
+        success: function (res) { },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+
+  }
 });

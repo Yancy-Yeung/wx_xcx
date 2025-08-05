@@ -5,7 +5,8 @@
     "pages/flight/flight",
     "pages/service/service",
     "pages/mine/mine",
-    "pages/logs/logs"
+    "pages/plane_search/plane_search",
+    "pages/to_news/to_news"
   ],
   "permission": {
     "scope.userLocation": {
