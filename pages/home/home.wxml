@@ -1,3 +1,179 @@
-<!--index.wxml-->
-<view class="return-button" bindtap="navigateToSplash">返回</view>
-<web-view src="https://example.com"></web-view>
+<swiper
+  indicator-dots="{{ indicatorDots }}"
+  autoplay="true"
+  interval="9000"
+  duration="2000"
+  circular="true"
+>
+  <block wx:for="{{ imgUrls }}" wx:key="{{ imgUrls }}">
+    <swiper-item>
+      <image src="{{ item.img }}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 功能按钮区域 -->
+<view class="function-tabs">
+  <!-- 第一行 -->
+  <view class="tab-row">
+    <view class="tab-item" bindtap="onTabClick" data-type="service">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/plane_search.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text">航班查询</text>
+    </view>
+    <view class="tab-item" bindtap="onTabClick" data-type="departure">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/plane_go.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text">香港出发</text>
+    </view>
+    <view class="tab-item" bindtap="onTabClick" data-type="arrive">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/plane_come.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text">到达香港</text>
+    </view>
+    <view class="tab-item" bindtap="onTabClick" data-type="transfer">
+      <view class="tab-icon">
+        <image
+        class="logo-image"
+        src="/images/home/plane_transfer.png"
+        mode="aspectFit"
+      ></image>
+      </view>
+      <text class="tab-text">中转接驳</text>
+    </view>
+  </view>
+</view>
+
+<!-- Tabs组件 -->
+<view class="tabs-container">
+  <!-- Tab标签栏 -->
+  <view class="tabs-header">
+    <view
+      class="tab-header-item {{ activeTab === 0 ? 'active' : '' }}"
+      bindtap="onTabChange"
+      data-index="0"
+    >
+      <text class="tab-header-text">最新通知</text>
+    </view>
+    <view
+      class="tab-header-item {{ activeTab === 1 ? 'active' : '' }}"
+      bindtap="onTabChange"
+      data-index="1"
+    >
+      <text class="tab-header-text">机场交通</text>
+    </view>
+    <view
+      class="tab-header-item {{ activeTab === 2 ? 'active' : '' }}"
+      bindtap="onTabChange"
+      data-index="2"
+    >
+      <text class="tab-header-text">旅客指南</text>
+    </view>
+    <view
+    class="tab-header-item {{ activeTab === 3 ? 'active' : '' }}"
+    bindtap="onTabChange"
+    data-index="3"
+  >
+    <text class="tab-header-text">客服电话</text>
+  </view>
+  </view>
+
+  <!-- Tab内容区域 -->
+  <view class="tabs-content">
+    <!-- 热门推荐 -->
+    <view class="tab-content {{ activeTab === 0 ? 'active' : '' }}">
+      <view class="content-list">
+        <view class="content-item">
+          <view class="item-icon">🔥</view>
+          <view class="item-info">
+            <text class="item-title">快速安检通道</text>
+            <text class="item-desc">节省排队时间，快速通过安检</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-icon">⚡</view>
+          <view class="item-info">
+            <text class="item-title">VIP休息室</text>
+            <text class="item-desc">舒适环境，免费饮品和小食</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-icon">🎁</view>
+          <view class="item-info">
+            <text class="item-title">免税店优惠</text>
+            <text class="item-desc">专属折扣，限时优惠活动</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 机场服务 -->
+    <view class="tab-content {{ activeTab === 1 ? 'active' : '' }}">
+      <view class="content-list">
+        <view class="content-item">
+          <view class="item-icon">🛄</view>
+          <view class="item-info">
+            <text class="item-title">行李托运</text>
+            <text class="item-desc">在线办理行李托运服务</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-icon">🚌</view>
+          <view class="item-info">
+            <text class="item-title">机场巴士</text>
+            <text class="item-desc">查看巴士时刻表和路线</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-icon">🍽️</view>
+          <view class="item-info">
+            <text class="item-title">餐厅预订</text>
+            <text class="item-desc">提前预订机场餐厅座位</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 出行工具 -->
+    <view class="tab-content {{ activeTab === 2 ? 'active' : '' }}">
+      <view class="content-list">
+        <view class="content-item">
+          <view class="item-icon">🌤️</view>
+          <view class="item-info">
+            <text class="item-title">天气查询</text>
+            <text class="item-desc">目的地天气预报</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-icon">💱</view>
+          <view class="item-info">
+            <text class="item-title">汇率换算</text>
+            <text class="item-desc">实时汇率计算器</text>
+          </view>
+        </view>
+        <view class="content-item">
+          <view class="item-icon">🗺️</view>
+          <view class="item-info">
+            <text class="item-title">机场地图</text>
+            <text class="item-desc">查看机场内部导航地图</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

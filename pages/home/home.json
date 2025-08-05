@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "网页视图"
+  "navigationBarTitleText": "home",
+  "navigationStyle": "custom"
 }
