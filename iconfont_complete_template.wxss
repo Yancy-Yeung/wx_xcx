@@ -1,0 +1,91 @@
+/* 
+ * 项目名称：wx_xcx iconfont 样式
+ * 项目 ID：1151723
+ * 更新时间：2025-08-06
+ * 制作方法：从 iconfont.cn 下载并处理
+ */
+
+/* ========== 字体定义 ========== */
+@font-face {
+    font-family: 'iconfont';  /* project id 1151723 */
+    /* 在线版本 - 需要网络连接 */
+    src: url('//at.alicdn.com/t/font_1151723_最新版本号.eot');
+    src: url('//at.alicdn.com/t/font_1151723_最新版本号.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1151723_最新版本号.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1151723_最新版本号.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1151723_最新版本号.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1151723_最新版本号.svg#iconfont') format('svg');
+    
+    /* base64 版本 - 离线可用（取消注释使用）
+    src: url('data:application/octet-stream;base64,这里放置完整的base64字体数据') format('truetype');
+    */
+}
+
+/* ========== 基础样式 ========== */
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 32rpx;  /* 微信小程序使用 rpx */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== 图标定义 ========== */
+/* 全屏相关 */
+.iconquanpingsuoxiao:before {content: "\e6c6";}  /* 全屏缩小 */
+.iconquanpingxianshi:before {content: "\e6c7";}  /* 全屏显示 */
+
+/* 常用图标 */
+.icon-home:before {content: "\e869";}
+.icon-search:before {content: "\e612";}
+.icon-add:before {content: "\e605";}
+.icon-del:before {content: "\e789";}
+.icon-edit:before {content: "\e609";}
+
+/* 订单相关 */
+.icon-order:before {content: "\e63f";}
+.icon-coupon:before {content: "\e74b";}
+.icon-price:before {content: "\e628";}
+
+/* 用户相关 */
+.icon-user:before {content: "\e639";}
+.icon-tel:before {content: "\e668";}
+.icon-address:before {content: "\e610";}
+
+/* 购物相关 */
+.icon-shopcart:before {content: "\e63b";}
+.icon-balance:before {content: "\e66a";}
+
+/* ========== 颜色工具类 ========== */
+.ft-primary {color: #1aad19;}    /* 微信绿 */
+.ft-success {color: #2bae17;}    /* 成功绿 */
+.ft-warning {color: #f77507;}    /* 警告橙 */
+.ft-danger {color: #f30b0b;}     /* 危险红 */
+.ft-info {color: #306ea9;}       /* 信息蓝 */
+.ft-secondary {color: #999;}     /* 次要灰 */
+.ft-dark {color: #333;}          /* 深色 */
+.ft-light {color: #f8f9fa;}      /* 浅色 */
+
+/* ========== 尺寸工具类 ========== */
+.icon-xs {font-size: 24rpx;}     /* 超小 */
+.icon-sm {font-size: 28rpx;}     /* 小 */
+.icon-md {font-size: 32rpx;}     /* 中等（默认） */
+.icon-lg {font-size: 40rpx;}     /* 大 */
+.icon-xl {font-size: 48rpx;}     /* 超大 */
+
+/* ========== 使用示例 ========== */
+/*
+在 WXML 中使用：
+
+1. 基础用法：
+<text class="iconfont iconquanpingsuoxiao"></text>
+
+2. 带颜色：
+<text class="iconfont icon-home ft-primary"></text>
+
+3. 带尺寸：
+<text class="iconfont icon-search icon-lg"></text>
+
+4. 组合使用：
+<text class="iconfont icon-add ft-success icon-xl"></text>
+*/

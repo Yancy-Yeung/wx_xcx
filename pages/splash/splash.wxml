@@ -8,12 +8,12 @@
     <view class="logo-placeholder">
       <image
         class="logo-image"
-        src="/images/splash/earth.png"
+        src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/splash/earth.png"
         mode="aspectFit"
       ></image>
       <image
         class="plane-image"
-        src="/images/splash/plane.png"
+        src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/splash/plane.png"
         mode="aspectFit"
       ></image>
     </view>

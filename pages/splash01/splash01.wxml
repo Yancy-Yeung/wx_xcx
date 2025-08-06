@@ -1,0 +1,20 @@
+<!--pages/splash/splash.wxml-->
+<view class="splash-container">
+  <!-- 全屏背景图片 -->
+  <image
+    class="background-image"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/movie_01.png"
+    mode="aspectFill"
+  ></image>
+
+  <!-- 内容层 -->
+  <view class="content-overlay">
+    <!-- 倒计时显示 -->
+    <view class="countdown"> {{ countdown }}s </view>
+
+    <!-- 跳转按钮 -->
+    <view class="button-container">
+      <button class="skip-btn" bindtap="skipToIndex">Enter</button>
+    </view>
+  </view>
+</view>

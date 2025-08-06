@@ -1,3 +1,6 @@
+@import "../../wxss/color.wxss";
+@import "../../wxss/iconfont.wxss";
+
 page {
   background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 50%, #FFFFFF 100%);
   min-height: 100vh;
@@ -54,14 +57,15 @@ swiper image {
 }
 
 .tab-icon {
-  width          : 100rpx;
-  height         : 100rpx;
-  border-radius  : 25rpx;
-  background     : linear-gradient(135deg, #87CEEB 0%, #fafafa 100%);
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  margin-bottom  : 16rpx;
+  width             : 100rpx;
+  height            : 100rpx;
+  border-radius     : 25rpx;
+  border            : 1px solid #2F4F4F;
+  /* background     : linear-gradient(135deg, #87CEEB 0%, #fafafa 100%); */
+  display           : flex;
+  align-items       : center;
+  justify-content   : center;
+  margin-bottom     : 16rpx;
 }
 
 .tab-icon .image {

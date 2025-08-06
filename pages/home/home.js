@@ -1,10 +1,10 @@
 Page({
   data: {
     imgUrls: [
-      { img: "/images/home/swiper01.jpg" },
-      { img: "/images/home/swiper02.jpg" },
+      { img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/swiper01.jpg" },
+      { img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/swiper02.jpg" },
+    //   { img: "/images/movie_01.png" },
     ],
-    // Tabs组件状态
     activeTab: 0,
   },
 

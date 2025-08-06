@@ -17,42 +17,27 @@
   <!-- 第1行 -->
   <view class="tab-row">
     <view class="tab-item" bindtap="toPlaneSearch" data-type="service">
-      <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/airline.png"
-        mode="aspectFit"
-      ></image>
+      <view class="tab-icon">        
+        <text class="iconfont icon-airlines ft-blue"></text>     
       </view>
       <text class="tab-text">Flight</text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="departure">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/shipping.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-ship ft-blue"></text>
+        
       </view>
       <text class="tab-text">Shipping</text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="arrive">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/tax.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-jiaoshui ft-blue"></text>           
       </view>
       <text class="tab-text">Tax Refund</text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="transfer">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/plane_transfer.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-airLine ft-blue"></text>
       </view>
       <text class="tab-text"></text>
     </view>
@@ -62,41 +47,25 @@
   <view class="tab-row">
     <view class="tab-item" bindtap="toPlaneSearch" data-type="service">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/baggage.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-airline_luggage ft-blue"></text>
       </view>
       <text class="tab-text"></text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="departure">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/bankcard.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-ticket-airline ft-blue"></text>        
       </view>
       <text class="tab-text"></text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="arrive">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/tickets.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-yinhangqia ft-blue"></text>        
       </view>
       <text class="tab-text"></text>
     </view>
     <view class="tab-item" bindtap="onTabClick" data-type="transfer">
       <view class="tab-icon">
-        <image
-        class="logo-image"
-        src="/images/home/plane_transfer.png"
-        mode="aspectFit"
-      ></image>
+        <text class="iconfont icon-kefu ft-blue"></text>        
       </view>
       <text class="tab-text"></text>
     </view>
@@ -112,28 +81,28 @@
       bindtap="onTabChange"
       data-index="0"
     >
-      <text class="tab-header-text">最新消息</text>
+      <text class="tab-header-text"><i class="iconfont icon-airline_luggage ft-green"></i>最新消息</text>
     </view>
     <view
       class="tab-header-item {{ activeTab === 1 ? 'active' : '' }}"
       bindtap="onTabChange"
       data-index="1"
     >
-      <text class="tab-header-text">交通行程</text>
+      <!-- <text class="tab-header-text">交通行程</text> -->
     </view>
     <view
       class="tab-header-item {{ activeTab === 2 ? 'active' : '' }}"
       bindtap="onTabChange"
       data-index="2"
     >
-      <text class="tab-header-text">旅客工具</text>
+      <!-- <text class="tab-header-text">旅客工具</text> -->
     </view>
     <view
     class="tab-header-item {{ activeTab === 3 ? 'active' : '' }}"
     bindtap="onTabChange"
     data-index="3"
   >
-    <text class="tab-header-text">聯絡我們</text>
+    <!-- <text class="tab-header-text">聯絡我們</text> -->
   </view>
   </view>
 
@@ -143,21 +112,27 @@
     <view class="tab-content {{ activeTab === 0 ? 'active' : '' }}">
       <view class="content-list">
         <view class="content-item" bindtap="onToNews" >
-          <view class="item-icon">🔥</view>
+          <view class="item-icon">
+            <text class="iconfont icon-ethiopianairlines ft-blue"></text>
+          </view>
           <view class="item-info">
-            <text class="item-title">快速安检通道</text>
-            <text class="item-desc">节省排队时间，快速通过安检</text>
+            <text class="item-title">公众通知</text>
+            <text class="item-desc">香港国际机场客运大楼实施进出管制安排</text>
           </view>
         </view>
         <view class="content-item">
-          <view class="item-icon">⚡</view>
+          <view class="item-icon">
+            <text class="iconfont icon-chinaeasternairlines ft-blue"></text>
+          </view>
           <view class="item-info">
-            <text class="item-title">VIP休息室</text>
-            <text class="item-desc">舒适环境，免费饮品和小食</text>
+            <text class="item-title">无障碍浏览声明</text>
+            <text class="item-desc">香港国际机场网站的设计考虑到视障人士的需要，并获得「2020 无障碍网页嘉许计划」三年卓越表现奖（网站组别）。该嘉许计划由香港互联网注册管理有限公司主办、政府资讯科技总监办公室协办，以及平等机会委员会担任顾问。</text>
           </view>
         </view>
         <view class="content-item">
-          <view class="item-icon">🎁</view>
+          <view class="item-icon">
+            <text class="iconfont icon-ic_airlines ft-blue"></text>
+          </view>
           <view class="item-info">
             <text class="item-title">免税店优惠</text>
             <text class="item-desc">专属折扣，限时优惠活动</text>

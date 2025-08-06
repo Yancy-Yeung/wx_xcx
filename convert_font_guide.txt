@@ -1,0 +1,7 @@
+# 转换字体文件为 base64 的脚本
+# 在 PowerShell 中运行以下命令：
+
+# 1. 转换 TTF 文件为 base64
+[Convert]::ToBase64String([IO.File]::ReadAllBytes("iconfont.ttf")) | Out-File -FilePath "iconfont_base64.txt" -Encoding UTF8
+
+# 2. 然后将生成的 base64 内容复制到 wxss 文件中

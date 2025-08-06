@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/splash01/splash01",
+    "pages/splash01/splash",
     "pages/home/home",
     "pages/flight/flight",
     "pages/service/service",
@@ -33,7 +33,19 @@
         "text": "Flight",
         "iconPath": "images/tabBar/fly.png",
         "selectedIconPath": "images/tabBar/fly_HL.png"
-      }      
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "Service",
+        "iconPath": "images/tabBar/service.png",
+        "selectedIconPath": "images/tabBar/service_HL.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "Mine",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine_HL.png"
+      }
     ],
     "color": "#999999",
     "selectedColor": "#1296db",
