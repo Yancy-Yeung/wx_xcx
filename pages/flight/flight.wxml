@@ -1,0 +1,7 @@
+<view class="page-container">
+    <image
+        class="background-image"
+        src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/plane_search.jpg"
+        mode="aspectFill"
+      ></image>
+    </view>

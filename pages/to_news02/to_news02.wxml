@@ -1,0 +1,36 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-text">港飞计划2周年！礼遇超值机票优惠~</text>
+    <view class="sub-info">
+      <text class="location">香港国际机场</text>
+      <text class="sub-date"> 2025年07月04日 18:19</text>
+      <text class="sub-area"> 广东</text>
+    </view>
+  </view>
+
+  <image
+    class="imageTxt"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice03_01.webp"
+    mode="widthFix"
+  ></image>
+  <image
+    class="imageTxt"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice03_02.webp"
+    mode="widthFix"
+  ></image>
+  <image
+    class="imageTxt"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice03_03.webp"
+    mode="widthFix"
+  ></image>
+  <image
+    class="imageTxt"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice03_04.webp"
+    mode="widthFix"
+  ></image>
+  <image
+    class="imageTxt"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice03_05.webp"
+    mode="widthFix"
+  ></image>
+</view>

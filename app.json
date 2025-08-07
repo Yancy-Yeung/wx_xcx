@@ -3,16 +3,17 @@
     "pages/splash01/splash01",
     "pages/home/home",
     "pages/flight/flight",
-    "pages/service/service",
-    "pages/mine/mine",
+    "pages/traffic/traffic",
+    
     "pages/plane_search/plane_search",
-    "pages/to_news/to_news"
+    "pages/ship/ship",
+    "pages/tax_back/tax_back",
+    "pages/to_news/to_news",
+    "pages/to_news02/to_news02",
+
+    "pages/service/service",
+    "pages/mine/mine"   
   ],
-  "permission": {
-    "scope.userLocation": {
-      "desc": "Your location information will be used to obtain program information"
-    }
-  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1296db",
@@ -33,7 +34,13 @@
         "text": "Flight",
         "iconPath": "images/tabBar/fly.png",
         "selectedIconPath": "images/tabBar/fly_HL.png"
-      }      
+      },
+      {
+        "pagePath": "pages/traffic/traffic",
+        "text": "Traffic",
+        "iconPath": "images/tabBar/ship.png",
+        "selectedIconPath": "images/tabBar/ship_HL.png"
+      }
     ],
     "color": "#999999",
     "selectedColor": "#1296db",

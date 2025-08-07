@@ -1,17 +1,41 @@
 Page({
   data: {
     imgUrls: [
-      { img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/swiper01.jpg" },
-      { img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/swiper02.jpg" },
-    //   { img: "/images/movie_01.png" },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/00.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/01.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/02.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/03.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/04.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/05.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/06.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/07.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/08.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/09.jpg",
+      },
+      {
+        img: "https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/home/10.jpg",
+      },
     ],
     activeTab: 0,
-  },
-
-  navigateToSplash: function () {
-    wx.navigateTo({
-      url: "/pages/splash/splash",
-    });
   },
 
   // Tabs切换事件
@@ -113,22 +137,90 @@ Page({
     }
   },
 
-  toPlaneSearch:function(){
-    // let that = this;
+  toPlaneSearch: function () {
     wx.navigateTo({
-      url: '/pages/plane_search/plane_search',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
+      url: "/pages/plane_search/plane_search",
+      success: function (res) {},
+      fail: function (res) {},
+      complete: function (res) {},
+    });
   },
-  onToNews:function(){
-    wx.navigateTo({
-        url: '/pages/to_news/to_news',
-        success: function (res) { },
-        fail: function (res) { },
-        complete: function (res) { },
-      })
 
-  }
+  onTraffic: function () {
+    wx.navigateTo({
+      url: "/pages/ship/ship",
+      success: function (res) {},
+      fail: function (res) {},
+      complete: function (res) {},
+    });
+  },
+
+  onTaxBack: function () {
+    wx.navigateTo({
+      url: "/pages/tax_back/tax_back",
+      success: function (res) {},
+      fail: function (res) {},
+      complete: function (res) {},
+    });
+  },
+
+  onNoFunc: function(){
+    wx.showToast({
+        title: "功能开发中",
+        icon: "success",
+      });
+  },
+
+  onToNewsDetail: function () {      
+    wx.navigateTo({
+      url: "/pages/to_news/to_news",
+      success: function (res) {},
+      fail: function (res) {},
+      complete: function (res) {},
+    });
+  },
+  onToNewsDetail02: function(){
+    wx.navigateTo({
+        url: "/pages/to_news02/to_news02",
+        success: function (res) {},
+        fail: function (res) {},
+        complete: function (res) {},
+      });
+  },
+  onCopyURL: function (event) {
+    const url = event.currentTarget.dataset.url; // 获取 data-url 的值
+    if (url) {
+      wx.setClipboardData({
+        data: url,
+        success: () => {
+          wx.showToast({
+            title: "链接已复制",
+            icon: "success",
+            duration: 2000,
+          });
+        },
+        fail: () => {
+          wx.showToast({
+            title: "复制失败",
+            icon: "none",
+            duration: 2000,
+          });
+        },
+      });
+    } else {
+      wx.showToast({
+        title: "无效链接",
+        icon: "none",
+        duration: 2000,
+      });
+    }
+  },
+  onWebView: function () {
+    wx.navigateTo({
+      url: "/pages/to_webview/to_webview",
+      success: function (res) {},
+      fail: function (res) {},
+      complete: function (res) {},
+    });
+  },
 });

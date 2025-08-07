@@ -3,7 +3,7 @@
   <!-- 全屏背景图片 -->
   <image
     class="background-image"
-    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/movie_01.png"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/airport_08.png"
     mode="aspectFill"
   ></image>
 
