@@ -12,7 +12,8 @@
     "pages/to_news02/to_news02",
 
     "pages/service/service",
-    "pages/mine/mine"   
+    "pages/mine/mine",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
