@@ -1,7 +1,7 @@
 <view class="page-container">
-    <image
-        class="background-image"
-        src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice_01_detail.jpg"
-        mode="aspectFill"
-      ></image>
-    </view>
+  <image
+    class="background-image"
+    src="https://my-studio.oss-cn-shenzhen.aliyuncs.com/hkairport/news/notice_01_detail.jpg"
+    mode="aspectFill"
+  ></image>
+</view>
