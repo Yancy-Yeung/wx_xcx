@@ -125,7 +125,7 @@
           </view>
         </view>
 
-        <view class="content-item card">
+        <view class="content-item card" bindtap="onToNewsDetail02">
           <view class="card-img-wrap">
             <image
               class="card-img"
@@ -133,7 +133,7 @@
               mode="aspectFill"
             />
           </view>
-          <view class="card-info" bindtap="onToNewsDetail02">
+          <view class="card-info" >
             <text class="card-title"
               >港飞计划2周年倒计时狂欢！机票优惠全攻略速速来看~</text
             >
